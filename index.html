@@ -10,6 +10,8 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="src/style.css">
+    <!-- Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Weather App</title>
 </head>
 
@@ -41,8 +43,8 @@
                         </div>
                         <div class="col weather-details">
                             <p class="details" id="date">Friday 10:00</p>
-                            <p class="details degrees" id="temperature">7<sup class="unit" id="celsius">°C
-                                </sup><sup class="unit" id="fahrenheit"> |°F</sup></p>
+                            <p class="details degrees"><span id="temperature">7</span><sup class="unit" id="celsius">°C
+                                </sup><sup class="unit" id="fahrenheit"> | °F</sup></p>
                             <p class="details" id="perception">Partly cloudy</p>
                         </div>
                     </div>
@@ -50,13 +52,13 @@
                 <div class="row">
                     <div class="col conditions">
                         <div class="condition">
-                            <p class="condition-value" id="humidity">92%</p>
+                            <p class="condition-value"><span id="humidity">92</span>%</p>
                             <p class="condition-title">
                                 Humidity
                             </p>
                         </div>
                         <div class="condition">
-                            <p class="condition-value" id="wind">5km/h</p>
+                            <p class="condition-value"><span id="wind">5</span>km/h</p>
                             <p class="condition-title">
                                 Wind
                             </p>
