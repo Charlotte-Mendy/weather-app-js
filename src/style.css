@@ -1,1 +1,163 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap");
+body {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  background: -webkit-gradient(linear, left bottom, left top, from(#81dcfa), to(#669bf1));
+  background: linear-gradient(360deg, #81dcfa 0%, #669bf1 100%);
+}
+
+body main .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+body main .container .app-wrapper {
+  border: 1px solid #eee;
+  border-radius: 5px;
+  padding: 20px;
+  width: 700px;
+}
+
+body main .container .app-wrapper .row form {
+  margin-bottom: 30px;
+}
+
+body main .container .app-wrapper .row form .form-control::-webkit-input-placeholder {
+  font-weight: 300;
+}
+
+body main .container .app-wrapper .row form .form-control:-ms-input-placeholder {
+  font-weight: 300;
+}
+
+body main .container .app-wrapper .row form .form-control::-ms-input-placeholder {
+  font-weight: 300;
+}
+
+body main .container .app-wrapper .row form .form-control::placeholder {
+  font-weight: 300;
+}
+
+body main .container .app-wrapper .row .weather {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+body main .container .app-wrapper .row .weather .weather-main .location {
+  font-weight: 300;
+  font-size: 36px;
+}
+
+body main .container .app-wrapper .row .weather .weather-main .image {
+  width: 80px;
+}
+
+body main .container .app-wrapper .row .weather .weather-details .details {
+  font-size: 20px;
+}
+
+body main .container .app-wrapper .row .weather .weather-details .degrees {
+  font-size: 48px;
+}
+
+body main .container .app-wrapper .row .weather .weather-details .degrees .unit {
+  padding: 8px;
+}
+
+@media (min-width: 768px) {
+  body main .container .app-wrapper .row .weather {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-align: normal;
+        -ms-flex-align: normal;
+            align-items: normal;
+    text-align: left;
+  }
+  body main .container .app-wrapper .row .weather .weather-main {
+    width: 65%;
+  }
+  body main .container .app-wrapper .row .weather .weather-main .location {
+    font-weight: 300;
+    font-size: 60px;
+  }
+  body main .container .app-wrapper .row .weather .weather-main .image {
+    width: 100px;
+  }
+  body main .container .app-wrapper .row .weather .weather-details {
+    width: 35%;
+  }
+  body main .container .app-wrapper .row .weather .weather-details .degrees {
+    font-size: 72px;
+  }
+}
+
+body main .container .app-wrapper .row .conditions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  border-top: 1px solid #eee;
+  padding: 40px 20px 0 20px;
+}
+
+body main .container .app-wrapper .row .conditions .condition {
+  font-size: 14px;
+  text-align: center;
+  width: 30%;
+}
+
+body main .container .app-wrapper .row .conditions .condition .condition-title {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+/*# sourceMappingURL=style.css.map */

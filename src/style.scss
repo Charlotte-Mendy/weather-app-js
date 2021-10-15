@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+// Vars
+$font: 'Roboto', sans-serif;
+$fw300: 300;
+$fw500: 500;
+$gutter: 20px;
+
+// Mixins
+@mixin flexCenter($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  color: #fff;
+  font-family: $font;
+  font-weight: $fw300;
+  background: linear-gradient(
+    360deg,
+    rgb(129, 220, 250) 0%,
+    rgb(102, 155, 241) 100%
+  );
+
+  main {
+    .container {
+      @include flexCenter(row);
+      min-height: 100vh;
+
+      .app-wrapper {
+        border: 1px solid #eee;
+        border-radius: 5px;
+        padding: $gutter;
+        width: 700px;
+
+        .row {
+          form {
+            margin-bottom: $gutter * 1.5;
+
+            .form-control {
+              &::placeholder {
+                font-weight: $fw300;
+              }
+            }
+          }
+        }
+
+        .row {
+          .weather {
+            @include flexCenter(column);
+            margin-bottom: $gutter;
+            padding: $gutter;
+            text-align: center;
+
+            .weather-main {
+              .location {
+                font-weight: $fw300;
+                font-size: 36px;
+              }
+
+              .image {
+                width: 80px;
+              }
+            }
+
+            .weather-details {
+              .details {
+                font-size: $gutter;
+              }
+
+              .degrees {
+                font-size: 48px;
+
+                .unit {
+                  padding: $gutter/2.5;
+                }
+              }
+            }
+          }
+        }
+
+        // Media queries
+        @media (min-width: 768px) {
+          .row {
+            .weather {
+              @include flexCenter(row);
+              align-items: normal;
+              text-align: left;
+
+              .weather-main {
+                width: 65%;
+
+                .location {
+                  font-weight: $fw300;
+                  font-size: 60px;
+                }
+
+                .image {
+                  width: 100px;
+                }
+              }
+
+              .weather-details {
+                width: 35%;
+
+                .degrees {
+                  font-size: 72px;
+                }
+              }
+            }
+          }
+        }
+
+        .row {
+          .conditions {
+            @include flexCenter(row);
+            justify-content: space-evenly;
+            border-top: 1px solid #eee;
+            padding: $gutter * 2 $gutter 0 $gutter;
+
+            .condition {
+              font-size: 14px;
+              text-align: center;
+              width: 30%;
+
+              .condition-title {
+                text-transform: uppercase;
+                font-weight: $fw500;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
