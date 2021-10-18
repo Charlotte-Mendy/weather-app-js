@@ -103,6 +103,10 @@ function getWeather(event) {
 let celsiusTemperature = '';
 
 function displayFahrenheitTemperature() {
+  // Manage active class
+  fahrenheitEl.classList.add('active');
+  celsiusEl.classList.remove('active');
+
   // Convert °C ➡ °F
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
 
@@ -112,6 +116,10 @@ function displayFahrenheitTemperature() {
 }
 
 function displayCelsiusTemperature() {
+  // Manage active class
+  celsiusEl.classList.add('active');
+  fahrenheitEl.classList.remove('active');
+
   // Get initial value of temperature & write in UI
   let temperatureEl = document.querySelector('#temperature');
   temperatureEl.innerHTML = celsiusTemperature;

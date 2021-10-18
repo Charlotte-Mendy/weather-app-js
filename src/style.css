@@ -88,7 +88,6 @@ body main .container .app-wrapper .row .weather .weather-details .degrees {
 }
 
 body main .container .app-wrapper .row .weather .weather-details .degrees .unit {
-  color: #fff;
   font-size: 40px;
   text-decoration: none;
   cursor: pointer;
@@ -98,7 +97,15 @@ body main .container .app-wrapper .row .weather .weather-details .degrees .unit 
 
 body main .container .app-wrapper .row .weather .weather-details .degrees .unit:hover {
   text-decoration: underline;
-  opacity: 80%;
+}
+
+body main .container .app-wrapper .row .weather .weather-details .degrees .active {
+  color: #fff;
+}
+
+body main .container .app-wrapper .row .weather .weather-details .degrees .active:hover {
+  text-decoration: none;
+  cursor: default;
 }
 
 @media (min-width: 768px) {
