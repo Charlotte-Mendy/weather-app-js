@@ -255,4 +255,14 @@ body main .container .app-wrapper .row .forecast .forecast-temperatures .forecas
     text-align: center;
   }
 }
+
+body footer {
+  font-size: 12px;
+  padding: 16px 0;
+  text-align: center;
+}
+
+body footer .github-link {
+  color: #fff;
+}
 /*# sourceMappingURL=style.css.map */
