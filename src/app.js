@@ -1,3 +1,54 @@
+// Format date
+function formattedDate(timestamp) {
+  // New Date
+  let now = new Date(timestamp);
+
+  // Get day : match week days with index returned by getDay()
+  let weekDays = [
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+    'Sunday',
+  ];
+  let day = weekDays[now.getDay() - 1];
+
+  // Get date
+  let date = now.getDate();
+
+  // Get month : match months with index returned by getmonth()
+  let months = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+  ];
+  let month = months[now.getMonth()];
+
+  // Get hours & minutes
+  let hours = now.getHours();
+  let minutes = now.getMinutes();
+  // Prefix 0
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  return `${day} ${month}, ${date} - ${hours}:${minutes}`;
+}
+
 // Callback after response returned
 function displayWeather(response) {
   //  Get elements, retrieve data from API & write in UI
@@ -11,8 +62,9 @@ function displayWeather(response) {
   );
   iconEl.setAttribute('alt', `${response.data.weather[0].description}`);
 
-  //   todo date format
-  //   console.log(response.data.coord.dt);
+  let dateEl = document.querySelector('#date');
+  dateEl.innerHTML = formattedDate(response.data.dt * 1000);
+  console.log(dateEl.innerHTML);
 
   let temperatureEl = document.querySelector('#temperature');
   temperatureEl.innerHTML = Math.round(response.data.main.temp);
