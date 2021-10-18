@@ -177,4 +177,14 @@ body main .container .app-wrapper .row .conditions .condition .condition-title {
   text-transform: uppercase;
   font-weight: 500;
 }
+
+body footer {
+  font-size: 12px;
+  padding: 16px 0;
+  text-align: center;
+}
+
+body footer .github-link {
+  color: #fff;
+}
 /*# sourceMappingURL=style.css.map */
