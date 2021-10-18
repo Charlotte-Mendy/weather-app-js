@@ -80,15 +80,9 @@ function displayWeather(response) {
   windEl.innerHTML = Math.round(response.data.wind.speed);
 }
 
-// Callback after form submission
-function getWeather(event) {
-  event.preventDefault();
-
+function getWeather(city) {
   // API URL parts
   let apiEndpoint = 'https://api.openweathermap.org/data/2.5/weather';
-  // Get input element & retrieve city value entered by user
-  let inputEl = document.querySelector('#search');
-  let city = inputEl.value.trim();
   let unit = 'metric';
   let apiKey = 'eedb5c6bcfb2fdb0fcba2cac7bada0f6';
 
@@ -98,6 +92,18 @@ function getWeather(event) {
   //  API call & callback to be executed once response ok
   axios.get(apiUrl).then(displayWeather);
 }
+
+// Callback after form submission
+function getCity(event) {
+  event.preventDefault();
+
+  // Get input element & retrieve city value entered by user
+  let inputEl = document.querySelector('#search');
+  getWeather(inputEl.value.trim());
+}
+
+// On load, display default city
+getWeather('Paris');
 
 // Global access
 let celsiusTemperature = '';
@@ -127,7 +133,7 @@ function displayCelsiusTemperature() {
 
 // Listen form submission
 let searchForm = document.querySelector('#search-form');
-searchForm.addEventListener('submit', getWeather);
+searchForm.addEventListener('submit', getCity);
 
 // Listen fahrenheit link on click event
 let fahrenheitEl = document.querySelector('#fahrenheit');
