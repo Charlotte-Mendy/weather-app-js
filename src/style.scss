@@ -74,7 +74,16 @@ body {
                 font-size: 48px;
 
                 .unit {
-                  padding: $gutter/2.5;
+                  color: #fff;
+                  font-size: 40px;
+                  text-decoration: none;
+                  cursor: pointer;
+                  transition: all 0.3s ease-in-out;
+
+                  &:hover {
+                    text-decoration: underline;
+                    opacity: 80%;
+                  }
                 }
               }
             }

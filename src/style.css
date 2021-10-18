@@ -88,7 +88,17 @@ body main .container .app-wrapper .row .weather .weather-details .degrees {
 }
 
 body main .container .app-wrapper .row .weather .weather-details .degrees .unit {
-  padding: 8px;
+  color: #fff;
+  font-size: 40px;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+body main .container .app-wrapper .row .weather .weather-details .degrees .unit:hover {
+  text-decoration: underline;
+  opacity: 80%;
 }
 
 @media (min-width: 768px) {
