@@ -129,7 +129,7 @@ body main .container .app-wrapper .row .weather .weather-details .degrees .activ
     text-align: left;
   }
   body main .container .app-wrapper .row .weather .weather-main {
-    width: 65%;
+    width: 60%;
   }
   body main .container .app-wrapper .row .weather .weather-main .location {
     font-weight: 300;
@@ -139,7 +139,7 @@ body main .container .app-wrapper .row .weather .weather-details .degrees .activ
     width: 100px;
   }
   body main .container .app-wrapper .row .weather .weather-details {
-    width: 35%;
+    width: 40%;
   }
   body main .container .app-wrapper .row .weather .weather-details .degrees {
     font-size: 72px;
