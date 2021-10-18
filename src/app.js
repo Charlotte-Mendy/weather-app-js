@@ -67,7 +67,8 @@ function displayWeather(response) {
   console.log(dateEl.innerHTML);
 
   let temperatureEl = document.querySelector('#temperature');
-  temperatureEl.innerHTML = Math.round(response.data.main.temp);
+  celsiusTemperature = Math.round(response.data.main.temp);
+  temperatureEl.innerHTML = celsiusTemperature;
 
   let perceptionEl = document.querySelector('#perception');
   perceptionEl.innerHTML = response.data.weather[0].description;
@@ -98,6 +99,32 @@ function getWeather(event) {
   axios.get(apiUrl).then(displayWeather);
 }
 
+// Global access
+let celsiusTemperature = '';
+
+function displayFahrenheitTemperature() {
+  // Convert °C ➡ °F
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+
+  // Write in UI
+  let temperatureEl = document.querySelector('#temperature');
+  temperatureEl.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function displayCelsiusTemperature() {
+  // Get initial value of temperature & write in UI
+  let temperatureEl = document.querySelector('#temperature');
+  temperatureEl.innerHTML = celsiusTemperature;
+}
+
 // Listen form submission
 let searchForm = document.querySelector('#search-form');
 searchForm.addEventListener('submit', getWeather);
+
+// Listen fahrenheit link on click event
+let fahrenheitEl = document.querySelector('#fahrenheit');
+fahrenheitEl.addEventListener('click', displayFahrenheitTemperature);
+
+// Listen celsius link on click event
+let celsiusEl = document.querySelector('#celsius');
+celsiusEl.addEventListener('click', displayCelsiusTemperature);
