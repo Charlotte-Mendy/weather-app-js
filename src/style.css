@@ -108,6 +108,90 @@ body main .container .app-wrapper .row .weather .weather-details .degrees .activ
   cursor: default;
 }
 
+body main .container .app-wrapper .row .conditions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  border-top: 1px solid #eee;
+  padding: 40px 20px 0 20px;
+}
+
+body main .container .app-wrapper .row .conditions .condition {
+  font-size: 14px;
+  text-align: center;
+  width: 30%;
+}
+
+body main .container .app-wrapper .row .conditions .condition .condition-title {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+body main .container .app-wrapper .row .forecast {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+body main .container .app-wrapper .row .forecast .forecast-day {
+  font-weight: 500;
+  width: 30%;
+}
+
+body main .container .app-wrapper .row .forecast .forecast-image {
+  max-width: 40px;
+  width: 30%;
+}
+
+body main .container .app-wrapper .row .forecast .forecast-temperatures {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40%;
+}
+
+body main .container .app-wrapper .row .forecast .forecast-temperatures .forecast-temperature {
+  text-align: right;
+  width: 50%;
+}
+
 @media (min-width: 768px) {
   body main .container .app-wrapper .row .weather {
     display: -webkit-box;
@@ -144,47 +228,31 @@ body main .container .app-wrapper .row .weather .weather-details .degrees .activ
   body main .container .app-wrapper .row .weather .weather-details .degrees {
     font-size: 72px;
   }
-}
-
-body main .container .app-wrapper .row .conditions {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  border-top: 1px solid #eee;
-  padding: 40px 20px 0 20px;
-}
-
-body main .container .app-wrapper .row .conditions .condition {
-  font-size: 14px;
-  text-align: center;
-  width: 30%;
-}
-
-body main .container .app-wrapper .row .conditions .condition .condition-title {
-  text-transform: uppercase;
-  font-weight: 500;
-}
-
-body footer {
-  font-size: 12px;
-  padding: 16px 0;
-  text-align: center;
-}
-
-body footer .github-link {
-  color: #fff;
+  body main .container .app-wrapper .row .forecast {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 25%;
+    text-align: center;
+  }
+  body main .container .app-wrapper .row .forecast .forecast-day {
+    font-weight: 500;
+  }
+  body main .container .app-wrapper .row .forecast .forecast-image {
+    width: 40px;
+  }
+  body main .container .app-wrapper .row .forecast .forecast-temperature {
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=style.css.map */

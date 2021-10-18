@@ -97,6 +97,53 @@ body {
           }
         }
 
+        .row {
+          .conditions {
+            @include flexCenter(row);
+            justify-content: space-evenly;
+            border-top: 1px solid #eee;
+            padding: $gutter * 2 $gutter 0 $gutter;
+
+            .condition {
+              font-size: 14px;
+              text-align: center;
+              width: 30%;
+
+              .condition-title {
+                text-transform: uppercase;
+                font-weight: $fw500;
+              }
+            }
+          }
+        }
+
+        .row {
+          .forecast {
+            @include flexCenter(row);
+            justify-content: space-between;
+            width: 100%;
+
+            .forecast-day {
+              font-weight: $fw500;
+              width: 30%;
+            }
+
+            .forecast-image {
+              max-width: 40px;
+              width: 30%;
+            }
+            .forecast-temperatures {
+              @include flexCenter(row);
+              width: 40%;
+
+              .forecast-temperature {
+                text-align: right;
+                width: 50%;
+              }
+            }
+          }
+        }
+
         // Media queries
         @media (min-width: 768px) {
           .row {
@@ -127,38 +174,28 @@ body {
               }
             }
           }
-        }
 
-        .row {
-          .conditions {
-            @include flexCenter(row);
-            justify-content: space-evenly;
-            border-top: 1px solid #eee;
-            padding: $gutter * 2 $gutter 0 $gutter;
-
-            .condition {
-              font-size: 14px;
+          .row {
+            .forecast {
+              @include flexCenter(column);
+              width: 25%;
               text-align: center;
-              width: 30%;
 
-              .condition-title {
-                text-transform: uppercase;
+              .forecast-day {
                 font-weight: $fw500;
+              }
+
+              .forecast-image {
+                width: 40px;
+              }
+
+              .forecast-temperature {
+                text-align: center;
               }
             }
           }
         }
       }
-    }
-  }
-
-  footer {
-    font-size: 12px;
-    padding: 16px 0;
-    text-align: center;
-
-    .github-link {
-      color: #fff;
     }
   }
 }
