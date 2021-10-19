@@ -111,8 +111,6 @@ function displayForecast(response) {
 
 // Get forecast
 function getForecast(coords) {
-  // console.log(coords);
-
   // API URL parts
   let apiEndpoint = 'https://api.openweathermap.org/data/2.5/onecall';
   let unit = 'metric';
@@ -140,7 +138,6 @@ function displayWeather(response) {
 
   let dateEl = document.querySelector('#date');
   dateEl.innerHTML = formattedDate(response.data.dt * 1000);
-  console.log(dateEl.innerHTML);
 
   let temperatureEl = document.querySelector('#temperature');
   celsiusTemperature = Math.round(response.data.main.temp);
