@@ -35,7 +35,7 @@ body {
         padding: $gutter;
         width: 700px;
 
-        .row {
+        .form-section {
           form {
             margin-bottom: $gutter * 1.5;
 
@@ -47,7 +47,7 @@ body {
           }
         }
 
-        .row {
+        .weather-section {
           .weather {
             @include flexCenter(column);
             margin-bottom: $gutter;
@@ -97,7 +97,7 @@ body {
           }
         }
 
-        .row {
+        .conditions-section {
           .conditions {
             @include flexCenter(row);
             justify-content: space-evenly;
@@ -118,7 +118,7 @@ body {
           }
         }
 
-        .row {
+        .forecast-section {
           padding: $gutter;
           .forecast {
             @include flexCenter(row);

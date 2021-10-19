@@ -31,27 +31,27 @@ body main .container .app-wrapper {
   width: 700px;
 }
 
-body main .container .app-wrapper .row form {
+body main .container .app-wrapper .form-section form {
   margin-bottom: 30px;
 }
 
-body main .container .app-wrapper .row form .form-control::-webkit-input-placeholder {
+body main .container .app-wrapper .form-section form .form-control::-webkit-input-placeholder {
   font-weight: 300;
 }
 
-body main .container .app-wrapper .row form .form-control:-ms-input-placeholder {
+body main .container .app-wrapper .form-section form .form-control:-ms-input-placeholder {
   font-weight: 300;
 }
 
-body main .container .app-wrapper .row form .form-control::-ms-input-placeholder {
+body main .container .app-wrapper .form-section form .form-control::-ms-input-placeholder {
   font-weight: 300;
 }
 
-body main .container .app-wrapper .row form .form-control::placeholder {
+body main .container .app-wrapper .form-section form .form-control::placeholder {
   font-weight: 300;
 }
 
-body main .container .app-wrapper .row .weather {
+body main .container .app-wrapper .weather-section .weather {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -70,24 +70,24 @@ body main .container .app-wrapper .row .weather {
   text-align: center;
 }
 
-body main .container .app-wrapper .row .weather .weather-main .location {
+body main .container .app-wrapper .weather-section .weather .weather-main .location {
   font-weight: 300;
   font-size: 36px;
 }
 
-body main .container .app-wrapper .row .weather .weather-main .image {
+body main .container .app-wrapper .weather-section .weather .weather-main .image {
   width: 80px;
 }
 
-body main .container .app-wrapper .row .weather .weather-details .details {
+body main .container .app-wrapper .weather-section .weather .weather-details .details {
   font-size: 20px;
 }
 
-body main .container .app-wrapper .row .weather .weather-details .degrees {
+body main .container .app-wrapper .weather-section .weather .weather-details .degrees {
   font-size: 48px;
 }
 
-body main .container .app-wrapper .row .weather .weather-details .degrees .unit {
+body main .container .app-wrapper .weather-section .weather .weather-details .degrees .unit {
   font-size: 40px;
   text-decoration: none;
   cursor: pointer;
@@ -95,20 +95,20 @@ body main .container .app-wrapper .row .weather .weather-details .degrees .unit 
   transition: all 0.3s ease-in-out;
 }
 
-body main .container .app-wrapper .row .weather .weather-details .degrees .unit:hover {
+body main .container .app-wrapper .weather-section .weather .weather-details .degrees .unit:hover {
   text-decoration: underline;
 }
 
-body main .container .app-wrapper .row .weather .weather-details .degrees .active {
+body main .container .app-wrapper .weather-section .weather .weather-details .degrees .active {
   color: #fff;
 }
 
-body main .container .app-wrapper .row .weather .weather-details .degrees .active:hover {
+body main .container .app-wrapper .weather-section .weather .weather-details .degrees .active:hover {
   text-decoration: none;
   cursor: default;
 }
 
-body main .container .app-wrapper .row .conditions {
+body main .container .app-wrapper .conditions-section .conditions {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -130,22 +130,22 @@ body main .container .app-wrapper .row .conditions {
   padding: 40px 20px;
 }
 
-body main .container .app-wrapper .row .conditions .condition {
+body main .container .app-wrapper .conditions-section .conditions .condition {
   font-size: 14px;
   text-align: center;
   width: 30%;
 }
 
-body main .container .app-wrapper .row .conditions .condition .condition-title {
+body main .container .app-wrapper .conditions-section .conditions .condition .condition-title {
   text-transform: uppercase;
   font-weight: 500;
 }
 
-body main .container .app-wrapper .row {
+body main .container .app-wrapper .forecast-section {
   padding: 20px;
 }
 
-body main .container .app-wrapper .row .forecast {
+body main .container .app-wrapper .forecast-section .forecast {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -165,17 +165,17 @@ body main .container .app-wrapper .row .forecast {
   width: 100%;
 }
 
-body main .container .app-wrapper .row .forecast .forecast-day {
+body main .container .app-wrapper .forecast-section .forecast .forecast-day {
   font-weight: 500;
   width: 30%;
 }
 
-body main .container .app-wrapper .row .forecast .forecast-image {
+body main .container .app-wrapper .forecast-section .forecast .forecast-image {
   max-width: 40px;
   width: 30%;
 }
 
-body main .container .app-wrapper .row .forecast .forecast-temperatures {
+body main .container .app-wrapper .forecast-section .forecast .forecast-temperatures {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -192,7 +192,7 @@ body main .container .app-wrapper .row .forecast .forecast-temperatures {
   width: 40%;
 }
 
-body main .container .app-wrapper .row .forecast .forecast-temperatures .forecast-temperature {
+body main .container .app-wrapper .forecast-section .forecast .forecast-temperatures .forecast-temperature {
   text-align: right;
   width: 50%;
 }
