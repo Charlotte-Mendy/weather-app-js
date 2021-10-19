@@ -49,6 +49,35 @@ function formattedDate(timestamp) {
   return `${day} ${month}, ${date} - ${hours}:${minutes}`;
 }
 
+// Display forecast
+function displayForecast() {
+  // Get element
+  let forecastEl = document.querySelector('#forecast');
+
+  // Define template
+  let forecastTemplate = '';
+
+  // Loop through days array
+  let days = ['Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+
+  // Make a template for each iteration
+  days.forEach(function (day) {
+    forecastTemplate = `
+          <div class="col-2 forecast">
+              <div class="forecast-day">${day}</div>
+              <img src=" http://openweathermap.org/img/wn/01d@2x.png" alt="Clear sky" class="forecast-image"
+                  id="forecast-icon">
+              <div class="forecast-temperatures">
+                  <span class="forecast-temperature max" id="forecast-max">20°</span>
+                  <span class="forecast-temperature min" id="forecast-min">15°</span>
+              </div>
+          </div>`;
+
+    // Write in UI template for each day
+    forecastEl.innerHTML += forecastTemplate;
+  });
+}
+
 // Callback after response returned
 function displayWeather(response) {
   //  Get elements, retrieve data from API & write in UI
@@ -79,6 +108,8 @@ function displayWeather(response) {
   let windEl = document.querySelector('#wind');
   windEl.innerHTML = Math.round(response.data.wind.speed);
 }
+
+displayForecast();
 
 function getWeather(city) {
   // API URL parts
