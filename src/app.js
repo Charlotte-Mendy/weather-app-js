@@ -82,22 +82,24 @@ function displayForecast(response) {
 
   // Make a template for each iteration
   forecastDaily.forEach(function (forecastDay, index) {
-    console.log(index);
     if (index < 6) {
       forecastTemplate =
         forecastTemplate +
         `<div class="col-2 forecast">
                 <div class="forecast-day">${formatDay(forecastDay.dt)}</div>
-                    <img src=" http://openweathermap.org/img/wn/01d@2x.png" alt="Clear sky" class="forecast-image"
-                    id="forecast-icon">
-                    <div class="forecast-temperatures">
+                <img src="http://openweathermap.org/img/wn/${
+                  forecastDay.weather[0].icon
+                }@2x.png"
+                alt="${
+                  forecastDay.weather[0].description
+                }" class="forecast-image" id="forecast-icon">
+                <div class="forecast-temperatures">
                         <span class="forecast-temperature max" id="forecast-max">${Math.round(
                           forecastDay.temp.max
                         )}°</span>
                         <span class="forecast-temperature min" id="forecast-min">${Math.round(
                           forecastDay.temp.min
                         )}°</span>
-                    </div>
                 </div>
         </div>`;
     }
