@@ -49,35 +49,62 @@ function formattedDate(timestamp) {
   return `${day} ${month}, ${date} - ${hours}:${minutes}`;
 }
 
+// Format forecast day
+function formatDay(timestamp) {
+  // New date
+  let date = new Date(timestamp * 1000);
+
+  // Get day : match week days with index returned by getDay()
+  let weekDays = [
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+    'Sunday',
+  ];
+
+  let day = date.getDay();
+
+  return weekDays[day];
+}
+
 // Display forecast
 function displayForecast(response) {
-  // console.log(response.data.daily);
+  let forecastDaily = response.data.daily;
 
-  // Get element
+  // Get parent element
   let forecastEl = document.querySelector('#forecast');
 
   // Define template
   let forecastTemplate = '';
 
-  // Loop through days array
-  let days = ['Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
-
   // Make a template for each iteration
-  days.forEach(function (day) {
-    forecastTemplate = `
-          <div class="col-2 forecast">
-              <div class="forecast-day">${day}</div>
-              <img src=" http://openweathermap.org/img/wn/01d@2x.png" alt="Clear sky" class="forecast-image"
-                  id="forecast-icon">
-              <div class="forecast-temperatures">
-                  <span class="forecast-temperature max" id="forecast-max">20°</span>
-                  <span class="forecast-temperature min" id="forecast-min">15°</span>
-              </div>
-          </div>`;
-
-    // Write in UI template for each day
-    forecastEl.innerHTML += forecastTemplate;
+  forecastDaily.forEach(function (forecastDay, index) {
+    console.log(index);
+    if (index < 6) {
+      forecastTemplate =
+        forecastTemplate +
+        `<div class="col-2 forecast">
+                <div class="forecast-day">${formatDay(forecastDay.dt)}</div>
+                    <img src=" http://openweathermap.org/img/wn/01d@2x.png" alt="Clear sky" class="forecast-image"
+                    id="forecast-icon">
+                    <div class="forecast-temperatures">
+                        <span class="forecast-temperature max" id="forecast-max">${Math.round(
+                          forecastDay.temp.max
+                        )}°</span>
+                        <span class="forecast-temperature min" id="forecast-min">${Math.round(
+                          forecastDay.temp.min
+                        )}°</span>
+                    </div>
+                </div>
+        </div>`;
+    }
   });
+
+  // Write in UI forecast for each day according to template
+  forecastEl.innerHTML = forecastTemplate;
 }
 
 // Get forecast
@@ -91,7 +118,6 @@ function getForecast(coords) {
 
   // API URL built
   let apiUrl = `${apiEndpoint}?lat=${coords.lat}&lon=${coords.lon}&units=${unit}&appid=${apiKey}`;
-  console.log(apiUrl);
 
   // API call & callback
   axios.get(apiUrl).then(displayForecast);
