@@ -148,7 +148,7 @@ body {
 
         // Media queries
         @media (min-width: 768px) {
-          .row {
+          .weather-section {
             .weather {
               @include flexCenter(row);
               align-items: normal;
@@ -177,7 +177,7 @@ body {
             }
           }
 
-          .row {
+          .forecast-section {
             .forecast {
               @include flexCenter(column);
               width: 25%;

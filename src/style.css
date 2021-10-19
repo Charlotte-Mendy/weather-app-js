@@ -198,7 +198,7 @@ body main .container .app-wrapper .forecast-section .forecast .forecast-temperat
 }
 
 @media (min-width: 768px) {
-  body main .container .app-wrapper .row .weather {
+  body main .container .app-wrapper .weather-section .weather {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -217,23 +217,23 @@ body main .container .app-wrapper .forecast-section .forecast .forecast-temperat
             align-items: normal;
     text-align: left;
   }
-  body main .container .app-wrapper .row .weather .weather-main {
+  body main .container .app-wrapper .weather-section .weather .weather-main {
     width: 60%;
   }
-  body main .container .app-wrapper .row .weather .weather-main .location {
+  body main .container .app-wrapper .weather-section .weather .weather-main .location {
     font-weight: 300;
     font-size: 60px;
   }
-  body main .container .app-wrapper .row .weather .weather-main .image {
+  body main .container .app-wrapper .weather-section .weather .weather-main .image {
     width: 100px;
   }
-  body main .container .app-wrapper .row .weather .weather-details {
+  body main .container .app-wrapper .weather-section .weather .weather-details {
     width: 40%;
   }
-  body main .container .app-wrapper .row .weather .weather-details .degrees {
+  body main .container .app-wrapper .weather-section .weather .weather-details .degrees {
     font-size: 72px;
   }
-  body main .container .app-wrapper .row .forecast {
+  body main .container .app-wrapper .forecast-section .forecast {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -250,13 +250,13 @@ body main .container .app-wrapper .forecast-section .forecast .forecast-temperat
     width: 25%;
     text-align: center;
   }
-  body main .container .app-wrapper .row .forecast .forecast-day {
+  body main .container .app-wrapper .forecast-section .forecast .forecast-day {
     font-weight: 500;
   }
-  body main .container .app-wrapper .row .forecast .forecast-image {
+  body main .container .app-wrapper .forecast-section .forecast .forecast-image {
     width: 40px;
   }
-  body main .container .app-wrapper .row .forecast .forecast-temperature {
+  body main .container .app-wrapper .forecast-section .forecast .forecast-temperature {
     text-align: center;
   }
 }
