@@ -102,7 +102,8 @@ body {
             @include flexCenter(row);
             justify-content: space-evenly;
             border-top: 1px solid #eee;
-            padding: $gutter * 2 $gutter 0 $gutter;
+            border-bottom: 1px solid #eee;
+            padding: $gutter * 2 $gutter;
 
             .condition {
               font-size: 14px;
@@ -118,6 +119,7 @@ body {
         }
 
         .row {
+          padding: $gutter;
           .forecast {
             @include flexCenter(row);
             justify-content: space-between;

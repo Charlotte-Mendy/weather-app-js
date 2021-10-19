@@ -126,7 +126,8 @@ body main .container .app-wrapper .row .conditions {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   border-top: 1px solid #eee;
-  padding: 40px 20px 0 20px;
+  border-bottom: 1px solid #eee;
+  padding: 40px 20px;
 }
 
 body main .container .app-wrapper .row .conditions .condition {
@@ -138,6 +139,10 @@ body main .container .app-wrapper .row .conditions .condition {
 body main .container .app-wrapper .row .conditions .condition .condition-title {
   text-transform: uppercase;
   font-weight: 500;
+}
+
+body main .container .app-wrapper .row {
+  padding: 20px;
 }
 
 body main .container .app-wrapper .row .forecast {
