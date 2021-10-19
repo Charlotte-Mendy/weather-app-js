@@ -50,7 +50,9 @@ function formattedDate(timestamp) {
 }
 
 // Display forecast
-function displayForecast() {
+function displayForecast(response) {
+  // console.log(response.data.daily);
+
   // Get element
   let forecastEl = document.querySelector('#forecast');
 
@@ -76,6 +78,23 @@ function displayForecast() {
     // Write in UI template for each day
     forecastEl.innerHTML += forecastTemplate;
   });
+}
+
+// Get forecast
+function getForecast(coords) {
+  // console.log(coords);
+
+  // API URL parts
+  let apiEndpoint = 'https://api.openweathermap.org/data/2.5/onecall';
+  let unit = 'metric';
+  let apiKey = 'eedb5c6bcfb2fdb0fcba2cac7bada0f6';
+
+  // API URL built
+  let apiUrl = `${apiEndpoint}?lat=${coords.lat}&lon=${coords.lon}&units=${unit}&appid=${apiKey}`;
+  console.log(apiUrl);
+
+  // API call & callback
+  axios.get(apiUrl).then(displayForecast);
 }
 
 // Callback after response returned
@@ -107,9 +126,9 @@ function displayWeather(response) {
 
   let windEl = document.querySelector('#wind');
   windEl.innerHTML = Math.round(response.data.wind.speed);
-}
 
-displayForecast();
+  getForecast(response.data.coord);
+}
 
 function getWeather(city) {
   // API URL parts
