@@ -83,6 +83,10 @@ body main .container .app-wrapper .weather-section .weather .weather-details .de
   font-size: 20px;
 }
 
+body main .container .app-wrapper .weather-section .weather .weather-details .details::first-letter {
+  text-transform: capitalize;
+}
+
 body main .container .app-wrapper .weather-section .weather .weather-details .degrees {
   font-size: 48px;
 }

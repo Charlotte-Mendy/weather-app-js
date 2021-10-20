@@ -18,23 +18,6 @@ function formattedDate(timestamp) {
   // Get date
   let date = now.getDate();
 
-  // Get month : match months with index returned by getmonth()
-  let months = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December',
-  ];
-  let month = months[now.getMonth()];
-
   // Get hours & minutes
   let hours = now.getHours();
   let minutes = now.getMinutes();
@@ -46,7 +29,7 @@ function formattedDate(timestamp) {
     minutes = `0${minutes}`;
   }
 
-  return `${day} ${month}, ${date} - ${hours}:${minutes}`;
+  return `${day} ${date} , ${hours}:${minutes}`;
 }
 
 // Format forecast day

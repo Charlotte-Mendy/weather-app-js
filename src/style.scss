@@ -67,7 +67,11 @@ body {
 
             .weather-details {
               .details {
-                font-size: $gutter;
+                font-size: 20px;
+
+                &::first-letter {
+                  text-transform: capitalize;
+                }
               }
 
               .degrees {
