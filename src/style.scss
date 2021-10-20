@@ -32,6 +32,7 @@ body {
       .app-wrapper {
         border: 1px solid #eee;
         border-radius: 5px;
+        margin: $gutter 0;
         padding: $gutter;
         width: 700px;
 
@@ -106,9 +107,9 @@ body {
           .conditions {
             @include flexCenter(row);
             justify-content: space-evenly;
-            border-top: 1px solid #eee;
-            border-bottom: 1px solid #eee;
-            padding: $gutter * 2 $gutter;
+            border-top: 0.5px solid rgba(238, 238, 238, 0.3);
+            border-bottom: 0.5px solid rgba(238, 238, 238, 0.3);
+            padding: $gutter;
 
             .condition {
               font-size: 14px;
@@ -118,6 +119,7 @@ body {
               .condition-title {
                 text-transform: uppercase;
                 font-weight: $fw500;
+                margin: 0;
               }
             }
           }
@@ -198,7 +200,7 @@ body {
 
               .forecast-day {
                 font-weight: $fw500;
-                margin-bottom: 10px;
+                margin-bottom: $gutter / 2;
                 width: 100%;
               }
 
@@ -224,7 +226,6 @@ body {
 
   footer {
     font-size: 12px;
-    padding: 16px 0;
     text-align: center;
 
     .github-link {

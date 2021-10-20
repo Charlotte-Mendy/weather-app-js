@@ -27,6 +27,7 @@ body main .container {
 body main .container .app-wrapper {
   border: 1px solid #eee;
   border-radius: 5px;
+  margin: 20px 0;
   padding: 20px;
   width: 700px;
 }
@@ -130,9 +131,9 @@ body main .container .app-wrapper .conditions-section .conditions {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-  padding: 40px 20px;
+  border-top: 0.5px solid rgba(238, 238, 238, 0.3);
+  border-bottom: 0.5px solid rgba(238, 238, 238, 0.3);
+  padding: 20px;
 }
 
 body main .container .app-wrapper .conditions-section .conditions .condition {
@@ -144,6 +145,7 @@ body main .container .app-wrapper .conditions-section .conditions .condition {
 body main .container .app-wrapper .conditions-section .conditions .condition .condition-title {
   text-transform: uppercase;
   font-weight: 500;
+  margin: 0;
 }
 
 body main .container .app-wrapper .forecast-section {
@@ -285,7 +287,6 @@ body main .container .app-wrapper .forecast-section .forecast .forecast-temperat
 
 body footer {
   font-size: 12px;
-  padding: 16px 0;
   text-align: center;
 }
 
