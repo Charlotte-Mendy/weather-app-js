@@ -31,8 +31,9 @@ body main .container .app-wrapper {
   width: 700px;
 }
 
-body main .container .app-wrapper .form-section form {
+body main .container .app-wrapper .form-section {
   margin-bottom: 30px;
+  padding: 20px;
 }
 
 body main .container .app-wrapper .form-section form .form-control::-webkit-input-placeholder {

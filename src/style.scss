@@ -36,9 +36,10 @@ body {
         width: 700px;
 
         .form-section {
-          form {
-            margin-bottom: $gutter * 1.5;
+          margin-bottom: $gutter * 1.5;
+          padding: $gutter;
 
+          form {
             .form-control {
               &::placeholder {
                 font-weight: $fw300;
