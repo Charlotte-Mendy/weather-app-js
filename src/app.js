@@ -110,7 +110,7 @@ function getForecast(coords) {
 function displayWeather(response) {
   //  Get elements, retrieve data from API & write in UI
   let cityEl = document.querySelector('#city');
-  cityEl.innerHTML = response.data.name;
+  cityEl.innerHTML = response.data.name.replace('Arrondissement de', '');
 
   let iconEl = document.querySelector('#icon');
   iconEl.setAttribute(
