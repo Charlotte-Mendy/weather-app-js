@@ -106,7 +106,7 @@ function getForecast(coords) {
   axios.get(apiUrl).then(displayForecast);
 }
 
-// Callback after response returned
+// Callback if response ✅
 function displayWeather(response) {
   //  Get elements, retrieve data from API & write in UI
   let cityEl = document.querySelector('#city');
@@ -137,6 +137,28 @@ function displayWeather(response) {
   getForecast(response.data.coord);
 }
 
+// Callback if response ❌
+function displayError() {
+  // Get elements
+  let inputEl = document.querySelector('#search');
+  let errorEl = document.querySelector('#error');
+
+  // If city empty
+  if (inputEl.value === '' || inputEl.value === null) {
+    errorEl.innerHTML = 'Please enter a city';
+
+    // If city undefined
+  } else {
+    errorEl.innerHTML = 'Please enter a valid city and try again';
+  }
+
+  // Clear input & error message on input click
+  inputEl.addEventListener('click', (e) => {
+    inputEl.value = '';
+    errorEl.innerHTML = '';
+  });
+}
+
 function getWeather(city) {
   // API URL parts
   let apiEndpoint = 'https://api.openweathermap.org/data/2.5/weather';
@@ -146,8 +168,8 @@ function getWeather(city) {
   // URL built
   let apiUrl = `${apiEndpoint}?q=${city}&units=${unit}&appid=${apiKey}`;
 
-  //  API call & callback to be executed once response ok
-  axios.get(apiUrl).then(displayWeather);
+  //  API call & callbacks to be executed if response ok / if error
+  axios.get(apiUrl).then(displayWeather).catch(displayError);
 }
 
 // Callback after form submission

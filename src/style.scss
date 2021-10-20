@@ -47,6 +47,12 @@ body {
                 font-weight: $fw300;
               }
             }
+            .error-message {
+              color: orange;
+              font-size: 14px;
+              font-weight: $fw500;
+              margin-top: 5px;
+            }
           }
         }
 

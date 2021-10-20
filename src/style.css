@@ -55,6 +55,13 @@ body main .container .app-wrapper .form-section form .form-control::placeholder 
   font-weight: 300;
 }
 
+body main .container .app-wrapper .form-section form .error-message {
+  color: orange;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
 body main .container .app-wrapper .weather-section .weather {
   display: -webkit-box;
   display: -ms-flexbox;
