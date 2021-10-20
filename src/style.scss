@@ -20,8 +20,8 @@ body {
   font-weight: $fw300;
   background: linear-gradient(
     360deg,
-    rgb(129, 220, 250) 0%,
-    rgb(102, 155, 241) 100%
+    rgb(125, 222, 255) 0%,
+    rgb(37, 119, 250) 100%
   );
 
   main {
@@ -30,8 +30,9 @@ body {
       min-height: 100vh;
 
       .app-wrapper {
-        border: 1px solid #eee;
+        background-color: rgba(255, 255, 255, 0.15);
         border-radius: 5px;
+        box-shadow: rgba(37, 119, 250, 0.19) 5px 5px 15px 0px;
         margin: $gutter 0;
         padding: $gutter;
         width: 700px;

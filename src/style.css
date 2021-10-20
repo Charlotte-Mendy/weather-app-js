@@ -3,8 +3,8 @@ body {
   color: #fff;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  background: -webkit-gradient(linear, left bottom, left top, from(#81dcfa), to(#669bf1));
-  background: linear-gradient(360deg, #81dcfa 0%, #669bf1 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#7ddeff), to(#2577fa));
+  background: linear-gradient(360deg, #7ddeff 0%, #2577fa 100%);
 }
 
 body main .container {
@@ -25,8 +25,10 @@ body main .container {
 }
 
 body main .container .app-wrapper {
-  border: 1px solid #eee;
+  background-color: rgba(255, 255, 255, 0.15);
   border-radius: 5px;
+  -webkit-box-shadow: rgba(37, 119, 250, 0.19) 5px 5px 15px 0px;
+          box-shadow: rgba(37, 119, 250, 0.19) 5px 5px 15px 0px;
   margin: 20px 0;
   padding: 20px;
   width: 700px;
