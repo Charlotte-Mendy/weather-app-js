@@ -98,6 +98,11 @@ body main .container .app-wrapper .weather-section .weather .weather-details .de
   text-transform: capitalize;
 }
 
+body main .container .app-wrapper .weather-section .weather .weather-details .update {
+  font-size: 12px;
+  opacity: 70%;
+}
+
 body main .container .app-wrapper .weather-section .weather .weather-details .degrees {
   font-size: 48px;
 }

@@ -119,14 +119,14 @@ function displayWeather(response) {
   );
   iconEl.setAttribute('alt', `${response.data.weather[0].description}`);
 
-  let dateEl = document.querySelector('#date');
-  dateEl.innerHTML = formattedDate(response.data.dt * 1000);
-
   let temperatureEl = document.querySelector('#temperature');
   temperatureEl.innerHTML = Math.round(response.data.main.temp);
 
   let perceptionEl = document.querySelector('#perception');
   perceptionEl.innerHTML = response.data.weather[0].description;
+
+  let updateEl = document.querySelector('#update');
+  updateEl.innerHTML = formattedDate(response.data.dt * 1000);
 
   let humidityEl = document.querySelector('#humidity');
   humidityEl.innerHTML = response.data.main.humidity;
