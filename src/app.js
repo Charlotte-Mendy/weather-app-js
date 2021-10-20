@@ -142,7 +142,8 @@ function displayError() {
   // Get elements
   let inputEl = document.querySelector('#search');
   let errorEl = document.querySelector('#error');
-
+  console.log(inputEl.value);
+  console.log(error);
   // If city empty
   if (inputEl.value === '' || inputEl.value === null) {
     errorEl.innerHTML = 'Please enter a city';
@@ -181,7 +182,6 @@ function getCity(event) {
 
   // Retrieve city value entered by user & clear input
   getWeather(inputEl.value.trim());
-  inputEl.value = '';
 }
 
 // On load, display default city
