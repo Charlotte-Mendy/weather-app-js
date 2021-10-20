@@ -123,8 +123,7 @@ function displayWeather(response) {
   dateEl.innerHTML = formattedDate(response.data.dt * 1000);
 
   let temperatureEl = document.querySelector('#temperature');
-  celsiusTemperature = Math.round(response.data.main.temp);
-  temperatureEl.innerHTML = celsiusTemperature;
+  temperatureEl.innerHTML = Math.round(response.data.main.temp);
 
   let perceptionEl = document.querySelector('#perception');
   perceptionEl.innerHTML = response.data.weather[0].description;
@@ -163,40 +162,6 @@ function getCity(event) {
 // On load, display default city
 getWeather('Paris');
 
-// Global access
-let celsiusTemperature = '';
-
-function displayFahrenheitTemperature() {
-  // Manage active class
-  fahrenheitEl.classList.add('active');
-  celsiusEl.classList.remove('active');
-
-  // Convert °C ➡ °F
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-
-  // Write in UI
-  let temperatureEl = document.querySelector('#temperature');
-  temperatureEl.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-function displayCelsiusTemperature() {
-  // Manage active class
-  celsiusEl.classList.add('active');
-  fahrenheitEl.classList.remove('active');
-
-  // Get initial value of temperature & write in UI
-  let temperatureEl = document.querySelector('#temperature');
-  temperatureEl.innerHTML = celsiusTemperature;
-}
-
 // Listen form submission
 let searchForm = document.querySelector('#search-form');
 searchForm.addEventListener('submit', getCity);
-
-// Listen fahrenheit link on click event
-let fahrenheitEl = document.querySelector('#fahrenheit');
-fahrenheitEl.addEventListener('click', displayFahrenheitTemperature);
-
-// Listen celsius link on click event
-let celsiusEl = document.querySelector('#celsius');
-celsiusEl.addEventListener('click', displayCelsiusTemperature);
