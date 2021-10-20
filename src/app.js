@@ -154,7 +154,7 @@ function displayError() {
   }
 
   // Clear input & error message on input click
-  inputEl.addEventListener('click', (e) => {
+  inputEl.addEventListener('click', function () {
     inputEl.value = '';
     errorEl.innerHTML = '';
   });
