@@ -176,9 +176,12 @@ function getWeather(city) {
 function getCity(event) {
   event.preventDefault();
 
-  // Get input element & retrieve city value entered by user
+  // Get input element
   let inputEl = document.querySelector('#search');
+
+  // Retrieve city value entered by user & clear input
   getWeather(inputEl.value.trim());
+  inputEl.value = '';
 }
 
 // On load, display default city
